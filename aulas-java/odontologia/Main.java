@@ -1,10 +1,5 @@
 package odontologia;
 
-// O Main agora pode importar as classes do projeto.
-// Se estiverem em um pacote específico (ex: com.clinica), o import seria:
-// import com.clinica.Dentista;
-// Para simplificar, assumimos que estão no pacote padrão (ou no mesmo diretório).
-
 public class Main {
     
     public static void main(String[] args) {
