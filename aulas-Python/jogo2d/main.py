@@ -1,5 +1,5 @@
 import os
-import WConio2
+import WConio2 #pip install WConio2
 
 clock = 0
 bichoC = 15
