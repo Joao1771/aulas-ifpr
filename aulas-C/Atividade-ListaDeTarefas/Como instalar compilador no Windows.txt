@@ -1,0 +1,52 @@
+﻿(Guia de como compilar e utilizar o programa (pode ser em formato texto ou em vídeo))
+
+1 - Instalar o MINGW.
+
+
+2 - Localizar a pasta bin do MINGW e copiar o caminho.
+
+
+3 - Pesquisar “Variáveis do Sistema” e abrir a janela.
+
+
+4 - Ir em Variáveis do Ambiente, dois clicks no “Path” de baixo.
+
+
+5 - Colar o caminho do bin e dar OK em tudo para salvar.
+
+
+COMPILAR FORA DO VSCODE
+
+
+Abra o cmd e escreva:
+
+
+gcc caminho/programa.c -o programa.exe
+
+gcc:compilador      -o programa.exe: renomear a.exe para programa.exe
+
+
+Assim ele compila no local atual.
+
+
+NO VSCODE
+
+
+1 - Certificar que o gcc funciona no VSCode abrindo um terminal e executando “gcc”.
+
+
+2 - Instalar C/C++ da Microsoft e C/C++ Compile Run do daniel.
+
+
+3 - Salvar código e apertar na seta no canto superior direito ou F6.
+
+
+Ele compila com o nome do arquivo.
+
+
+Baseado no vídeo:
+https://www.youtube.com/watch?v=Mook-z2uvpM
+do canal Prof. Rogério Napoleão Jr.
+
+
+Caso não funcione avise no whats. Se funcionar, apagar essa e a primeira linhas.
