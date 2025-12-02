@@ -31,7 +31,7 @@ struct Item {
 typedef struct Item Item;
 ```
 
-Permite usar `Item` ao invés de `struct Item`, tornando o código mais limpo e legível.
+Permite usar `Item` ao invés de `struct Item`, só pra ficar mais limpo.
 
 #  Funções
 
@@ -42,9 +42,9 @@ Permite usar `Item` ao invés de `struct Item`, tornando o código mais limpo e 
 
 - Usa `malloc` para alocar memória.
     
-- Copia o texto recebido pelo `scanf` para o campo `tarefa`.
+- Copia o texto recebido pelo parâmetro para o campo `tarefa`.
     
-- Define `prox = NULL`.
+- Define `prox = NULL` por ser o último item.
     
 - Retorna o ponteiro para o novo item.
     
@@ -58,7 +58,7 @@ Permite usar `Item` ao invés de `struct Item`, tornando o código mais limpo e 
 
 - No Windows: executa `system(cls)`
     
-- Em Linux/Mac: executa `system(clear)`
+- No Linux/Mac: executa `system(clear)`
     
 
 
@@ -68,9 +68,7 @@ Permite usar `Item` ao invés de `struct Item`, tornando o código mais limpo e 
 
 - Percorre a lista com um ponteiro auxiliar.
     
--  Exibe cada tarefa com um traço.
-    
-- Se a lista estiver vazia, imprime mensagem adequada.
+- Se a lista estiver vazia, imprime a mensagem adequada.
     
 
 ##  `void adicionar(Item **lista)`
@@ -110,14 +108,14 @@ Permite usar `Item` ao invés de `struct Item`, tornando o código mais limpo e 
 -   Percorre a lista, se encontrar a tarefa:
 
     
-    -   Ajusta ponteiros conforme for início, meio ou fim.
+    -   Ajusta os ponteiros conforme for início, meio ou fim.
         
     -   Deleta o Item e libera memória com `free`.
         
 
 
 #  Função Principal — `main()`
-**Função onde está o menu principal.**
+**Função onde está o menu principal e todas as chamadas.**
 
 -   Cria a lista vazia: `Item *lista = NULL`.
     
@@ -140,23 +138,13 @@ Permite usar `Item` ao invés de `struct Item`, tornando o código mais limpo e 
 -   Caso opção inválida, exibe uma mensagem e roda o `while` de novo.
     
 
-# Resumo de Fluxo
 
-MENU ├── a → `adicionar()` → volta ao menu 
-MENU ├── m → `alterar()` → volta ao menu 
-MENU ├── e → `excluir()` → volta ao menu 
-MENU ├── l → `imprimirLista()` → volta ao menu 
-MENU └── s → encerra programa
-
-----------
 
 #  Observações Importantes
 
 -   Todas as tarefas são armazenadas em uma **lista encadeada**.
     
--   Para controle de uso de memória, `malloc` é usado para cada item, e `free` para excluir.
-    
--   Entrada das tarefas com `fgets` usa o arquivo `stdin` e evita problemas de espaços.
+-   Entrada das tarefas com `fgets` usa o arquivo `stdin` e evita problemas de espaços com `scanf`.
 
 # Telas do programa
 
